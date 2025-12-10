@@ -82,6 +82,8 @@
   --bs-link-hover-color: #50817e;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #faf4e0;
+  --bs-body-font-family: "JetBrains Mono", monospace;
+  --bs-font-sans-serif: "JetBrains Mono", monospace;
 }
 
 *,
@@ -638,12 +640,69 @@ progress {
   color: #fff !important;
 }
 
+#equipment .card {
+  color: #000 !important;
+}
+
+#equipment .card .card-title,
+#equipment .card .card-text {
+  color: #000 !important;
+}
+
+#equipment .card .text-muted {
+  color: #6c757d !important;
+}
+
+
+/* Publications Section Refinements */
+#publications {
+  background-color: #1E3932 !important;
+  color: #fff !important;
+}
+
+#publications h2,
+#publications .text-black,
+#publications .publication-link strong {
+  color: #fff !important;
+}
+
+#publications .publication-link:hover strong {
+  color: #64a19d !important;
+  /* Use teal for hover to stand out */
+}
+
+#publications em {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.btn-google-scholar {
+  background-color: #4285F4 !important;
+  border-color: #4285F4 !important;
+  color: #fff !important;
+}
+
+.btn-google-scholar:hover {
+  background-color: #357ae8 !important;
+  /* Slightly darker on hover */
+  border-color: #357ae8 !important;
+}
 
 .home-subtitle {
   font-family: "JetBrains Mono", monospace;
   color: #fff;
   font-size: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 100% !important;
+  /* Allow proper full width */
+  white-space: normal;
+  /* Ensure it CAN wrap on mobile if needed, but 100% width on desktop prevents unnecessary wrapping */
+}
+
+@media (min-width: 992px) {
+  .home-subtitle {
+    white-space: nowrap;
+    /* Force one line on desktop if space permits */
+  }
 }
 
 .lead {
@@ -12941,8 +13000,10 @@ body {
 
   #mainNav .nav-link {
     transition: none;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     color: rgba(255, 255, 255, 0.5);
+    font-weight: 650;
+    /* Thick letters */
   }
 
   #mainNav .nav-link:hover {
@@ -12963,7 +13024,7 @@ body {
 
   #mainNav.navbar-shrink .nav-link {
     color: #000;
-    padding: 1.5rem 1.5rem 1.25rem;
+    padding: 1.5rem 1rem;
     border-bottom: 0.25rem solid transparent;
   }
 
@@ -13114,7 +13175,7 @@ body {
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .contact-section .card {
@@ -13125,7 +13186,6 @@ body {
 .contact-section .card h4,
 .contact-section .card .h4 {
   font-size: 0.8rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
@@ -13139,6 +13199,20 @@ body {
 
 .contact-section .social {
   margin-top: 5rem;
+}
+
+.contact-section .card h4 {
+  font-size: 1.5rem;
+  /* 24px */
+  /* Increase heading size */
+  font-weight: 650;
+  font-family: "JetBrains Mono", monospace !important;
+  /* Force font family */
+}
+
+/* Remove underline from email */
+.contact-section .card a {
+  text-decoration: none !important;
 }
 
 .contact-section .social a {
@@ -13181,12 +13255,13 @@ body {
 
 /* Custom link style for department names */
 .dept-link {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #fff !important;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .dept-link:hover {
-  color: #fff !important;
+  color: #64a19d !important;
+  /* Default highlight green/teal */
   text-decoration: none;
 }
