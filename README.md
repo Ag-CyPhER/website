@@ -12,7 +12,7 @@ ToDo:
 2. Update Anna's and former grads images boundary to white - Done
 3. Include the rest of the equipment images in the eq page. - Done
 
--- The description color changed to teal but still black is visible. - Update it.
+-- The description color changed to teal but still black is visible. - Update it. - done
 
 4. update Publications page
 5. Update News

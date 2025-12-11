@@ -13282,9 +13282,3 @@ body {
   /* Default highlight green/teal */
   text-decoration: none;
 }
-
-.text-equipment-teal {
-  color: #67c29c !important;
-  font-weight: 500;
-  /* Adding a bit of weight for visibility */
-}
