@@ -8,8 +8,11 @@ ToDo:
 
 12/10/2025
 
-1. Update the Formaer grads info - change their degree to tale color.
-2. Update Anna's and former grads images boundary to white
-3. Include the rest of the equipment images in the eq page.
+1. Update the Former grads info - change their degree to tale color - Done
+2. Update Anna's and former grads images boundary to white - Done
+3. Include the rest of the equipment images in the eq page. - Done
+
+-- The description color changed to teal but still black is visible. - Update it.
+
 4. update Publications page
 5. Update News
