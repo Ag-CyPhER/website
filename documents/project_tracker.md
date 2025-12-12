@@ -1,27 +1,22 @@
-# Ag-CyPhER Lab Website
+ToDo:
 
-Official website for the **Agricultural Cyber-Physical Systems Engineering Research (Ag-CyPhER)** Lab at the University of Delaware.
+12/09/2025
+1. Keep consistent font size through out the website - Done
+2. Need to make the Home page better - Done.
+3. Upload the papers to the drive shared folder, and link the respective papers to their titles. - Done
+4. If time permits, look into the research page and make it better such that we can differentiate between the projects. - Final if time allows.
 
-## Overview
-This repository hosts the source code for the lab's public-facing website, showcasing our research, team, equipment, and publications.
+12/10/2025
 
-## Live Site
-[https://ag-cypher.github.io/website/](https://ag-cypher.github.io/website/)
+1. Update the Former grads info - change their degree to tale color - Done
+2. Update Anna's and former grads images boundary to white - Done
+3. Include the rest of the equipment images in the eq page. - Done
 
-## Tech Stack
-*   **HTML5 / CSS3** (Custom styling + Bootstrap)
-*   **JavaScript** (Interactions)
-*   **FontAwesome** (Icons)
+-- The description color changed to teal but still black is visible. - Update it. - done
 
-## Development
-To run locally:
-```bash
-python -m http.server
-```
-Visit `http://localhost:8000` in your browser.
+4. update Publications page
+5. Update News
 
-## Contact
-**Dr. Yin Bao**
-Assistant Professor
-University of Delaware
-yinbao@udel.edu
+13/10/2025
+
+1. Add group image in Media
