@@ -13282,6 +13282,7 @@ body {
 }
 
 .dept-link:hover {
+  color: #64a19d !important;
   /* Default highlight green/teal */
   text-decoration: none;
 }
