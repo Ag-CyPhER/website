@@ -59,3 +59,77 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// Preloader removal
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('loaded');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500); // Wait for transition to finish
+    }
+});
+
+// Initialize Swiper for Equipment Carousel
+window.addEventListener('DOMContentLoaded', () => {
+    const swiperElement = document.querySelector('.equipment-swiper');
+    if (swiperElement) {
+        const swiper = new Swiper('.equipment-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    }
+});
+
+// Publications Show More Logic
+window.addEventListener('DOMContentLoaded', () => {
+    const pubList = document.getElementById('publicationList');
+    const loadMoreBtn = document.getElementById('loadMorePubsBtn');
+    
+    if (pubList && loadMoreBtn) {
+        const pubItems = pubList.querySelectorAll('.publication-item');
+        
+        // Hide button if 4 or fewer items
+        if (pubItems.length <= 4) {
+            loadMoreBtn.style.display = 'none';
+        }
+        
+        loadMoreBtn.addEventListener('click', () => {
+            pubList.classList.toggle('show-all');
+            
+            if (pubList.classList.contains('show-all')) {
+                loadMoreBtn.textContent = 'Show Less';
+            } else {
+                loadMoreBtn.textContent = 'Show More Publications';
+                // Optional: Scroll back to the top of the publications list
+                const publicationsSection = document.getElementById('publications');
+                if (publicationsSection) {
+                    publicationsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
+});

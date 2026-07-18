@@ -582,7 +582,7 @@ progress {
   color: #fff !important;
   padding: 1rem 2rem;
   font-size: 1.25rem;
-  border-radius: 5px;
+  border-radius: 50rem;
   transition: all 0.3s ease;
 }
 
@@ -13224,11 +13224,12 @@ body {
 
 .contact-section .social a {
   text-align: center;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 100%;
-  line-height: 3rem;
+  line-height: 4rem;
+  font-size: 1.75rem;
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -13513,3 +13514,52 @@ body {
   color: #6c757d !important;
   font-size: 0.95rem;
 }
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1E3932;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Swiper Pagination Overrides */
+.equipment-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5); /* Make inactive dots visible */
+    opacity: 1;
+}
+.equipment-swiper .swiper-pagination-bullet-active {
+    background: #64a19d; /* Match theme primary color */
+}
+
+/* Publications Show More */
+#publicationList .publication-item:nth-child(n+5) {
+    display: none;
+}
+#publicationList.show-all .publication-item:nth-child(n+5) {
+    display: flex;
+}
+

@@ -22,11 +22,17 @@
         rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css?v=106" rel="stylesheet" />
 </head>
 
 <body id="page-top">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
@@ -74,8 +80,8 @@
                         precision farming.
                     </p>
                     <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                        <a class="btn btn-home" href="#research">Our Research</a>
-                        <a class="btn btn-home" href="#people">Meet the Team</a>
+                        <a class="btn btn-home rounded-pill fw-bold" href="#research">Our Research</a>
+                        <a class="btn btn-home rounded-pill fw-bold" href="#people">Meet the Team</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +225,7 @@
             <!-- Students -->
             <h3 class="text-white mb-4">Current Graduate Students</h3>
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-4 mb-4">
+                <div class="col-lg-3 mb-4">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle mb-4" src="assets/img/head_shots/puran_headshot.jpeg"
                             alt="Puranjit Singh"
@@ -234,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
+                <div class="col-lg-3 mb-4">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle mb-4" src="assets/img/head_shots/ashish_headshot.jpeg"
                             alt="Ashish Reddy M"
@@ -249,21 +255,85 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle mb-4" src="assets/img/head_shots/annamalai_headshot.png"
+                            alt="Annamalai Muthupalaniappan"
+                            style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
+                        <h4 class="text-white">Annamalai M</h4>
+                        <p class="text-primary mb-3">PhD (ME, 2026 - Now)</p>
+                        <div class="d-flex justify-content-center gap-3 team-socials">
+                            <a class="text-white" href="#" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                            <a class="text-white" href="https://www.linkedin.com/in/anna2malai-m/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle mb-4" src="assets/img/head_shots/nurul_azmir.jpg"
+                            alt="Md Nurul Azmir"
+                            style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
+                        <h4 class="text-white">Md Nurul Azmir</h4>
+                        <p class="text-primary mb-3">PhD (PLSC, 2026 - Now)</p>
+                        <div class="d-flex justify-content-center gap-3 team-socials">
+                            <a class="text-white" href="https://scholar.google.com/citations?user=4vWE914AAAAJ&hl=en"
+                                target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                            <a class="text-white" href="https://linkedin.com/in/nurul-azmir-683988209?originalSubdomain=bd"
+                                target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- RA -->
             <h3 class="text-white mb-4">Research Assistants</h3>
             <div class="row justify-content-center mb-5">
-                <div class="col-lg-4 mb-4">
+                <div class="col-lg-3 mb-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle mb-4" src="assets/img/head_shots/annamalai_headshot.png"
-                            alt="Annamalai Muthupalaniappan"
+                        <img class="mx-auto rounded-circle mb-4" src="assets/img/head_shots/joseph_farley.jpg"
+                            alt="Joseph Farley"
                             style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
-                        <h4 class="text-white">Annamalai Muthupalaniappan</h4>
-                        <p class="text-primary mb-3">MS (Robotics, 2024 - Now)</p>
+                        <h4 class="text-white">Joseph Farley</h4>
+                        <p class="text-primary mb-3">MS (ME, 2026 - Now)</p>
                         <div class="d-flex justify-content-center gap-3 team-socials">
-                            <a class="text-white mx-2" href="https://www.linkedin.com/in/anna2malai-m/"
-                                target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a class="text-white mx-2" href="https://www.linkedin.com/in/joey-farley/" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle mb-4" src="https://ui-avatars.com/api/?name=Karthik+Mohan&size=150&background=random&color=fff"
+                            alt="Karthik Mohan"
+                            style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
+                        <h4 class="text-white">Karthik Mohan</h4>
+                        <p class="text-primary mb-3">MS (Robotics, 2026 - Now)</p>
+                        <div class="d-flex justify-content-center gap-3 team-socials">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle mb-4" src="https://ui-avatars.com/api/?name=Arjun&size=150&background=random&color=fff"
+                            alt="Arjun"
+                            style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
+                        <h4 class="text-white">Arjun</h4>
+                        <p class="text-primary mb-3">MS (Robotics, 2026 - Now)</p>
+                        <div class="d-flex justify-content-center gap-3 team-socials">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle mb-4" src="https://ui-avatars.com/api/?name=Tamahjoy+Kinyanjui&size=150&background=random&color=fff"
+                            alt="Tamahjoy Kinyanjui"
+                            style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
+                        <h4 class="text-white">Tamahjoy Kinyanjui</h4>
+                        <p class="text-primary mb-3">MS (Robotics, 2026 - Now)</p>
+                        <div class="d-flex justify-content-center gap-3 team-socials">
+                            <a class="text-white mx-2" href="https://ke.linkedin.com/in/tamahjoy-mbura-kinyanjui-31567828an" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -451,7 +521,21 @@
                 <div class="col-lg-8 text-center">
                     <h2 class="text-black mb-4">Key Publications</h2>
                     <div class="text-black-50 text-start">
-                        <ul class="list-unstyled mb-5">
+                        <ul class="list-unstyled mb-5" id="publicationList">
+                            <li class="mb-4 publication-item">
+                                <a href="https://drive.google.com/file/d/1gs2j6wWlBZl1bdcfxnFbXYLhAeMz6ecA/view?usp=drive_link"
+                                    target="_blank" class="publication-link">
+                                    <strong>PRIM3: Pod Reconstruction and Instance Matching in 3D for Lima Bean Pod Counting and Yield Assessment (Available at SSRN 7118982)</strong>
+                                </a><br>
+                                <em>Computers and Electronics in Agriculture, Jul 2026</em>
+                            </li>
+                            <li class="mb-4 publication-item">
+                                <a href="https://drive.google.com/file/d/10VwEsg8ZMjtIud4eavkRBbTZrOB83pWi/view?usp=drive_link"
+                                    target="_blank" class="publication-link">
+                                    <strong>Harnessing citizen science to contextualize adaptation mechanism discovery</strong>
+                                </a><br>
+                                <em>A Cell Press Journal, May 2026</em>
+                            </li>
                             <li class="mb-4 publication-item">
                                 <a href="https://drive.google.com/file/d/1b1A8pVEr2UJJK6cIOpcUMO1YGrFr_MOI/view"
                                     target="_blank" class="publication-link">
@@ -574,8 +658,9 @@
                                 <em>Plant Physiology, Aug 2017</em>
                             </li>
                         </ul>
-                        <div class="text-center">
-                            <a class="btn btn-google-scholar"
+                        <div class="text-center d-flex flex-column flex-md-row justify-content-center gap-3 mt-4">
+                            <button id="loadMorePubsBtn" class="btn btn-outline-light border border-2 rounded-pill px-4 py-2 fw-bold">Show More Publications</button>
+                            <a class="btn btn-google-scholar rounded-pill px-4 py-2 fw-bold"
                                 href="https://scholar.google.com/citations?user=lZnlIDQAAAAJ&hl=en" target="_blank">
                                 More on Google Scholar</a>
                         </div>
@@ -594,9 +679,10 @@
                 </div>
             </div>
             <!-- Full Priority List: Robots -> Compute -> Sensors -> Vision -->
-            <div class="row justify-content-center">
+            <div class="swiper equipment-swiper py-2 px-md-5">
+                <div class="swiper-wrapper align-items-stretch">
                 <!-- 1. Amiga Farmng Robot -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/amiga1.jpeg" class="card-img-top p-3" alt="Farm-ng Amiga"
                             style="height: 200px; object-fit: contain;">
@@ -608,7 +694,7 @@
                     </div>
                 </div>
                 <!-- 2. Drone (DJI M350 RTK) -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/dji_drone.png" class="card-img-top p-3" alt="DJI M350 RTK"
                             style="height: 200px; object-fit: contain;">
@@ -619,7 +705,7 @@
                     </div>
                 </div>
                 <!-- 3. Rivulet -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/rivulet.jpeg" class="card-img-top p-3"
                             alt="Rivulet Micro-Crop Monitor" style="height: 200px; object-fit: contain;">
@@ -630,7 +716,7 @@
                     </div>
                 </div>
                 <!-- 4. ZED Box -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/ZEDBox.avif" class="card-img-top p-3" alt="ZED Box"
                             style="height: 200px; object-fit: contain;">
@@ -641,7 +727,7 @@
                     </div>
                 </div>
                 <!-- 5. Jetson -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/Jetson_AGX_Orin.webp" class="card-img-top p-3"
                             alt="NVIDIA Jetson AGX Orin" style="height: 200px; object-fit: contain;">
@@ -652,7 +738,7 @@
                     </div>
                 </div>
                 <!-- 6. ZED Box Mini -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/zed-box-mini.jpg" class="card-img-top p-3"
                             alt="ZED Box Mini" style="height: 200px; object-fit: contain;">
@@ -665,7 +751,7 @@
                     </div>
                 </div>
                 <!-- 7. Hyperspectral Camera -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/hyperspectral_camera.png" class="card-img-top p-3"
                             alt="Hyperspectral Camera" style="height: 200px; object-fit: contain;">
@@ -677,7 +763,7 @@
                     </div>
                 </div>
                 <!-- 8. DJI LiDAR -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/DJI_LiDAR.png" class="card-img-top p-3" alt="DJI LiDAR"
                             style="height: 200px; object-fit: contain;">
@@ -689,7 +775,7 @@
                     </div>
                 </div>
                 <!-- 9. Livox LiDAR -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/livox_mid360.png" class="card-img-top p-3"
                             alt="Livox Mid360 LiDAR" style="height: 200px; object-fit: contain;">
@@ -701,7 +787,7 @@
                     </div>
                 </div>
                 <!-- 10. Zed X Mini Stereo -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/ZED-X-Mini.webp" class="card-img-top p-3" alt="ZED X Mini"
                             style="height: 200px; object-fit: contain;">
@@ -712,7 +798,7 @@
                     </div>
                 </div>
                 <!-- 11. Zed X One -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/zed_x_one.avif" class="card-img-top p-3"
                             alt="Zed X One Camera" style="height: 200px; object-fit: contain;">
@@ -724,7 +810,7 @@
                     </div>
                 </div>
                 <!-- 12. Strobe Lights -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/strobe_lights.jpeg" class="card-img-top p-3"
                             alt="High Intensity Strobe Light" style="height: 200px; object-fit: contain;">
@@ -735,7 +821,7 @@
                     </div>
                 </div>
                 <!-- 13. RS3 Reach Emlid -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/emlid_gps.webp" class="card-img-top p-3"
                             alt="RS3 Reach Emlid RTK GPS" style="height: 200px; object-fit: contain;">
@@ -747,7 +833,7 @@
                     </div>
                 </div>
                 <!-- 14. TDR Soil Probe -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/TDR_350_Soil_Probe.jpg" class="card-img-top p-3"
                             alt="TDR 350 Soil Probe" style="height: 200px; object-fit: contain;">
@@ -759,7 +845,7 @@
                     </div>
                 </div>
                 <!-- 15. Gamma Ray Spectrometer -->
-                <div class="col-md-4 mb-4">
+                <div class="swiper-slide h-auto">
                     <div class="card h-100 border-0 shadow-sm">
                         <img src="assets/img/equipment/images/Medusa-MS-350-gamma-ray-spectrometer.webp"
                             class="card-img-top p-3" alt="Gamma Ray Spectrometer"
@@ -770,8 +856,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> <!-- Close swiper-wrapper -->
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination position-relative mt-5"></div>
+            <!-- Swiper Navigation -->
+            <div class="swiper-button-prev text-primary"></div>
+            <div class="swiper-button-next text-primary"></div>
+        </div> <!-- Close swiper -->
+        </div> <!-- Close container -->
     </section>
 
     <!-- Contact Section-->
@@ -826,7 +918,8 @@
     </section>
     <!-- Footer-->
     <footer class="footer bg-forest-green small text-center text-white-50">
-        <div class="container px-4 px-lg-5">Copyright &copy; Ag-CyPhER Lab 2025</div>
+        <div class="container px-4 px-lg-5 mb-2">Design adapted from <a href="https://startbootstrap.com/" target="_blank" class="text-white-50 text-decoration-none border-bottom border-white-50">Start Bootstrap</a></div>
+        <div class="container px-4 px-lg-5">Copyright &copy; Ag-CyPhER Lab 2026</div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -843,6 +936,8 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         AOS.init({
             duration: 800,
