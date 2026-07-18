@@ -663,18 +663,8 @@ progress {
 }
 
 #publications h2,
-#publications .text-black,
-#publications .publication-link strong {
+#publications .text-black {
   color: #fff !important;
-}
-
-#publications .publication-link:hover strong {
-  color: #64a19d !important;
-  /* Use teal for hover to stand out */
-}
-
-#publications em {
-  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .btn-google-scholar {
@@ -13289,4 +13279,237 @@ body {
 
 .bg-forest-green {
   background-color: #1E3932;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Vertical Timeline */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #64a19d;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #fff;
+  border: 4px solid #64a19d;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+.timeline-content {
+  padding: 20px 30px;
+  background-color: rgba(255,255,255,0.05);
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: left; /* Keep text left aligned inside */
+}
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    text-align: left;
+  }
+  .timeline-item:nth-child(even) {
+    left: 0%;
+  }
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 21px;
+  }
+}
+
+/* Dynamic Section Dividers */
+.section-relative {
+    position: relative;
+}
+.custom-shape-divider {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider.top { top: 0; }
+.custom-shape-divider.bottom { bottom: 0; }
+.custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px);
+    height: 70px;
+}
+
+/* Ken Burns Masthead */
+.masthead-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.73) 100%, rgb(9, 9, 9) 0%, #080808 0%), url('../assets/img/pine_forest.jpg');
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  animation: kenburns 15s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #64a19d;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  text-decoration: none;
+}
+.scroll-to-top:hover {
+  background-color: #50817e;
+  color: white;
+  transform: translateY(-3px);
+}
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Research Project Hover Zoom */
+.project-image-container img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.project-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Team Member Hover Interaction */
+.team-member {
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-socials {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+.team-socials a {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.team-member:hover .team-socials a {
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .team-socials {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Publications Interactive Cards */
+#publications .list-unstyled {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.publication-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #1E3932;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0 !important;
+}
+.publication-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-left-color: #64a19d;
+}
+.publication-link {
+  text-decoration: none !important;
+  color: #000 !important;
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+.publication-link strong {
+  color: #000 !important;
+}
+.publication-link::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+.publication-item em {
+  color: #6c757d !important;
+  font-size: 0.95rem;
 }

@@ -20,6 +20,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css?v=106" rel="stylesheet" />
 </head>
@@ -50,9 +52,9 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead"
-        style="background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.73) 100%, rgb(9, 9, 9) 0%, #080808 0%), url('assets/img/pine_forest.jpg'); background-position: center; background-repeat: no-repeat; background-attachment: scroll; background-size: cover;">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+    <header class="masthead position-relative overflow-hidden">
+        <div class="masthead-bg"></div>
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center position-relative z-1">
             <div class="d-flex justify-content-center">
                 <div class="text-center">
                     <div class="home-glass-container">
@@ -81,7 +83,7 @@
     </header>
 
     <!-- Research Section-->
-    <section class="projects-section bg-light" id="research">
+    <section class="projects-section bg-light section-relative" id="research">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
@@ -92,8 +94,8 @@
             </div>
 
             <!-- Project One Row (Forest Inventory) -->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="assets/img/research_data/Research/new1.png"
+            <div class="row gx-0 mb-5 justify-content-center shadow-lg rounded overflow-hidden mx-auto" style="max-width: 1100px;">
+                <div class="col-lg-6 overflow-hidden project-image-container"><img class="img-fluid" src="assets/img/research_data/Research/new1.png"
                         alt="Inventory Management" style="width: 100%; height: 100%; object-fit: contain;" /></div>
                 <div class="col-lg-6">
                     <div class="bg-research-green text-center h-100 project">
@@ -109,8 +111,8 @@
             </div>
 
             <!-- Project Two Row (Blueberry) -->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid"
+            <div class="row gx-0 mb-5 justify-content-center shadow-lg rounded overflow-hidden mx-auto" style="max-width: 1100px;">
+                <div class="col-lg-6 overflow-hidden project-image-container"><img class="img-fluid"
                         src="assets/img/research_data/Research1_images/blue_berry.png" alt="Blueberry Yield Prediction"
                         style="width: 100%; height: 100%; object-fit: contain;" /></div>
                 <div class="col-lg-6 order-lg-first">
@@ -120,6 +122,14 @@
                                 <h4 class="text-black">Blueberry Yield Prediction</h4>
                                 <p class="mb-0 text-black-50">Smartphone app to detect ripe berries and predict yield.
                                 </p>
+                                <div class="d-flex justify-content-center justify-content-lg-end gap-3 mt-4">
+                                    <a href="http://play.google.com/store/apps/details?id=com.bluebie.package&hl=en_US" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill px-3 fw-bold shadow-sm">
+                                        <i class="fab fa-google-play me-2"></i>Play Store
+                                    </a>
+                                    <a href="https://apps.apple.com/us/app/blueberry-yield-analyzer/id6749166732" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill px-3 fw-bold shadow-sm">
+                                        <i class="fab fa-apple me-2"></i>App Store
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,8 +137,8 @@
             </div>
 
             <!-- Project Three Row (Lima Beans) -->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6 bg-research-green"><img class="img-fluid"
+            <div class="row gx-0 mb-5 justify-content-center shadow-lg rounded overflow-hidden mx-auto" style="max-width: 1100px;">
+                <div class="col-lg-6 bg-research-green overflow-hidden project-image-container"><img class="img-fluid"
                         src="assets/img/research_data/Research2_images/lima_robot_gs.png" alt="In-Field Pod Counting"
                         style="width: 100%; height: 100%; object-fit: contain;" /></div>
                 <div class="col-lg-6">
@@ -145,8 +155,8 @@
             </div>
 
             <!-- Project Four Row (Drone) -->
-            <div class="row gx-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="assets/img/research_data/drone/drone1.png" alt="Drone"
+            <div class="row gx-0 justify-content-center shadow-lg rounded overflow-hidden mx-auto" style="max-width: 1100px;">
+                <div class="col-lg-6 overflow-hidden project-image-container"><img class="img-fluid" src="assets/img/research_data/drone/drone1.png" alt="Drone"
                         style="width: 100%; height: 100%; object-fit: contain;" /></div>
                 <div class="col-lg-6 order-lg-first">
                     <div class="bg-research-blue text-center h-100 project">
@@ -193,7 +203,7 @@
                             </div>
                             <div>University of Delaware</div>
                         </div>
-                        <div class="d-flex justify-content-center align-items-center gap-3">
+                        <div class="d-flex justify-content-center align-items-center gap-3 team-socials">
                             <a class="text-white text-decoration-none fw-bold"
                                 href="assets/img/research_data/info/Curriculum Vitae_Yin Bao 20251028.pdf"
                                 target="_blank">CV</a>
@@ -216,7 +226,7 @@
                             style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgb(255, 255, 255);" />
                         <h4 class="text-white">Puranjit Singh</h4>
                         <p class="text-primary mb-3">PhD (PLSC, 2023 - Now)</p>
-                        <div class="d-flex justify-content-center gap-3">
+                        <div class="d-flex justify-content-center gap-3 team-socials">
                             <a class="text-white" href="https://scholar.google.com/citations?user=_wA1fKcAAAAJ&hl=en"
                                 target="_blank"><i class="fas fa-graduation-cap"></i></a>
                             <a class="text-white" href="https://www.linkedin.com/in/puranjit-singh-94303813a/"
@@ -231,7 +241,7 @@
                             style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
                         <h4 class="text-white">Ashish Reddy M</h4>
                         <p class="text-primary mb-3">PhD (PLSC, 2025 - Now)</p>
-                        <div class="d-flex justify-content-center gap-3">
+                        <div class="d-flex justify-content-center gap-3 team-socials">
                             <a class="text-white" href="https://scholar.google.com/citations?user=JXjCuBUAAAAJ&hl=en"
                                 target="_blank"><i class="fas fa-graduation-cap"></i></a>
                             <a class="text-white" href="https://www.linkedin.com/in/ashishreddy26/" target="_blank"><i
@@ -251,7 +261,7 @@
                             style="width: 150px; height: 150px; object-fit: cover; border: 3px solid rgba(255, 255, 255);" />
                         <h4 class="text-white">Annamalai Muthupalaniappan</h4>
                         <p class="text-primary mb-3">MS (Robotics, 2024 - Now)</p>
-                        <div class="d-flex justify-content-center gap-3">
+                        <div class="d-flex justify-content-center gap-3 team-socials">
                             <a class="text-white mx-2" href="https://www.linkedin.com/in/anna2malai-m/"
                                 target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
@@ -334,17 +344,17 @@
     </section>
 
     <!-- Media Section-->
-    <section class="projects-section bg-light" id="media">
+    <section class="projects-section bg-forest-green section-relative" id="media">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
-                    <h2 class="text-black mb-4">Media</h2>
+                    <h2 class="text-white mb-4" data-aos="fade-up">Media</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <!-- Video 0 -->
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100 border-0 shadow-sm bg-black">
+                    <div class="card h-100 border-0 shadow-sm glass-card" data-aos="fade-up">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/b6DQ2VZjwJc" title="Farm Robotic Challenge 2026 Video Presentation"
                                 allowfullscreen></iframe>
@@ -356,7 +366,7 @@
                 </div>
                 <!-- Video 1 -->
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100 border-0 shadow-sm bg-black">
+                    <div class="card h-100 border-0 shadow-sm glass-card" data-aos="fade-up">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/HBx01g8s90A" title="FarmRoboticChallenge 2025"
                                 allowfullscreen></iframe>
@@ -369,7 +379,7 @@
                 </div>
                 <!-- Video 2 -->
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100 border-0 shadow-sm bg-black">
+                    <div class="card h-100 border-0 shadow-sm glass-card" data-aos="fade-up">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/naS5SwzPVtc"
                                 title="SLAM Navigation of Farm-ng Amiga Robot using Mid 360 LiDAR"
@@ -391,42 +401,43 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8">
                     <h2 class="text-white mb-4">News & Achievements</h2>
-                    <div class="text-white-50 text-start">
-                        <ul class="list-unstyled">
-                            <li class="mb-4">
-                                <i class="fas fa-star text-primary me-2"></i>
-                                <strong class="text-primary">2026</strong> - <em><a
-                                        href="https://www.farmroboticschallenge.ai/2026results/v/university-of-delaware"
-                                        target="_blank" style="text-decoration: none; color: inherit;">Farm Robotics Challenge
-                                        2026</a></em><br>
-                                Team Blue Hens - <strong>AI in Excellence Award winner (Divison-I)</strong>
-                            </li>
-                            <li class="mb-4">
-                                <i class="fas fa-trophy text-primary me-2"></i>
-                                <strong class="text-primary">November 2025</strong> - <em>Tri-Society CANVAS
-                                    2025</em><br>
-                                Congratulations to <strong>Puranjit Singh</strong> for securing the <strong>2nd
-                                    Position</strong> in the Precision Agriculture Systems Community PhD Oral
-                                Presentation!
-                            </li>
-                            <li class="mb-4">
-                                <i class="fas fa-award text-primary me-2"></i>
-                                <strong class="text-primary">October 2025</strong> - <em>Delaware Data Science
-                                    Symposium</em><br>
-                                We are proud to announce that <strong>Puranjit Singh</strong> received the
-                                <strong>Statewide EPSCoR Best Poster Award</strong>, and <strong>Ashish Reddy</strong>
-                                won the <strong>Best Student Poster Award</strong> in the PhD Category.
-                            </li>
-                            <li class="mb-4">
-                                <i class="fas fa-star text-primary me-2"></i>
-                                <strong class="text-primary">May 2025</strong> - <em><a
-                                        href="https://www.farmroboticschallenge.ai/2025results/v/universitydelaware"
-                                        target="_blank" style="text-decoration: none; color: inherit;">Farm Robotic
-                                        Challenge
-                                        2025</a></em><br>
-                                The Ag-CyPhER Lab team was honored with the <strong>Judges Choice Impact Award</strong>.
-                            </li>
-                        </ul>
+                    <div class="timeline mt-5">
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <i class="fas fa-star text-primary mb-2 d-block fa-2x"></i>
+                                <strong class="text-primary fs-5">May 2026</strong><br>
+                                <em><a href="https://www.farmroboticschallenge.ai/2026results/v/university-of-delaware" target="_blank" class="text-white text-decoration-none">Farm Robotics Challenge 2026</a></em><br>
+                                <span class="text-white-50">Team Blue Hens - <strong>AI in Excellence Award winner (Divison-I)</strong></span>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <i class="fas fa-trophy text-primary mb-2 d-block fa-2x"></i>
+                                <strong class="text-primary fs-5">November 2025</strong><br>
+                                <em class="text-white">Tri-Society CANVAS 2025</em><br>
+                                <span class="text-white-50"> <strong>Puranjit Singh (2nd Position)</strong> - Precision Agriculture Systems Community (PhD Oral)</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-right">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <i class="fas fa-award text-primary mb-2 d-block fa-2x"></i>
+                                <strong class="text-primary fs-5">October 2025</strong><br>
+                                <em class="text-white">Delaware Data Science Symposium</em><br>
+                                <span class="text-white-50"><strong>Puranjit Singh - Statewide EPSCoR Best Poster Award</strong> & <strong>Ashish Reddy - Best Student Poster Award (PhD Category)</strong></span>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <i class="fas fa-star text-primary mb-2 d-block fa-2x"></i>
+                                <strong class="text-primary fs-5">May 2025</strong><br>
+                                <em><a href="https://www.farmroboticschallenge.ai/2025results/v/universitydelaware" target="_blank" class="text-white text-decoration-none">Farm Robotic Challenge 2025</a></em><br>
+                                <span class="text-white-50">Team Ag-CyPhER Lab - <strong>Judges Choice Impact Award</strong>.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -799,7 +810,7 @@
                             <i class="fas fa-mobile-alt text-primary mb-2"></i>
                             <h4 class="text-uppercase m-0">Phone</h4>
                             <hr class="my-4 mx-auto" />
-                            <div class="text-black-50">302-831-7136</div>
+                            <div class="small text-black-50">302-831-7136</div>
                         </div>
                     </div>
                 </div>
@@ -825,7 +836,20 @@
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- Go to Top Button -->
+    <a href="#page-top" class="scroll-to-top" id="scrollToTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </a>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+    </script>
 </body>
 
 </html>
