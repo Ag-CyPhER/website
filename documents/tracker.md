@@ -31,4 +31,5 @@
 - [x] **Added four new Research Assistants**: Joseph Farley, Karthik Mohan, Arjun, and Tamahjoy Kinyanjui - Integrated an automatic placeholder avatar generator for team members missing headshots to keep the grid perfectly aligned.
 - [x] **New Publications**: Added the PRIM3 (Lima Bean Pod Counting) and Harnessing Citizen Science papers to the top of the Key Publications list.
 - [x] **App Integrations**: Added Apple App Store and Google Play Store link buttons directly inside the Blueberry Yield Prediction project description.
-- [ ] **Update Socials**: Confirm & update socials and headshots for the newly added grad students.
+- [x] **Update Socials**: Confirm & update socials and headshots for the newly added grad students.
+- [ ] **Update Socials**: Update socials for missing grad students.
